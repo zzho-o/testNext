@@ -17,12 +17,6 @@ const Home = () => {
         <div>Count: {count}</div>
         <Button onClick={increase}>+</Button>
       </div>
-
-      {/* <ul>
-        {data.map((item: any) => (
-          <li key={item.id}>{item.name}</li>
-        ))}
-      </ul> */}
     </div>
   );
 };
