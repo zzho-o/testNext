@@ -1,11 +1,8 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { useExampleQuery } from "@/hooks/useQuery";
-import { useExampleStore } from "@/stores/useExampleStore";
 
 const Home = () => {
-  const { count, increase } = useExampleStore();
   const { isLoading, error } = useExampleQuery();
 
   if (isLoading) return <div>로딩중...</div>;
@@ -13,10 +10,7 @@ const Home = () => {
 
   return (
     <div className="flex flex-col gap-2">
-      <div className="flex items-center gap-2">
-        <div>Count: {count}</div>
-        <Button onClick={increase}>+</Button>
-      </div>
+      <div className="flex items-center gap-2"></div>
     </div>
   );
 };

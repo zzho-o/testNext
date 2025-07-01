@@ -1,4 +1,4 @@
-export interface ExampleState {
-  count: number;
-  increase: () => void;
+export interface user {
+  name: string;
+  position: string;
 }

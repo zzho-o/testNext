@@ -1,7 +1,10 @@
 import Image from "next/image";
 import Sidebar from "../Sidebar";
+import { useUserStore } from "@/stores/useExampleStore";
 
 const Header = () => {
+  const { name, position } = useUserStore();
+
   return (
     <>
       <div className="fixed flex justify-between h-[60px] px-[20px] py-[12px] items-center flex-shrink-0 border-b border-[rgba(194,196,200,0.52)] bg-[#FFF] z-[100] w-full">
@@ -35,10 +38,10 @@ const Header = () => {
             <div className="w-[12px]" />
             <div className="flex flex-col w-[60px] justify-center">
               <div className="text-[#171719] text-[14px] font-semibold leading-[1.429] tracking-[0.203px] font-pretendard">
-                <span>홍길동</span>
+                <span>{name}</span>
               </div>
               <div className="text-[#959CA9] text-[12px] font-normal leading-[1.334] tracking-[0.302px] font-pretendard">
-                <span>학습자</span>
+                <span>{position}</span>
               </div>
             </div>
           </div>
