@@ -1,11 +1,4 @@
 import Image from "next/image";
-import calendar from "@/assets/calendar.svg";
-import home from "@/assets/home.svg";
-import meeting_hub from "@/assets/meeting_hub.svg";
-import notice from "@/assets/notice.svg";
-import personal_group from "@/assets/personal_group.svg";
-import webinar from "@/assets/webinar.svg";
-import settings from "@/assets/settings.svg";
 import { useState } from "react";
 
 const Sidebar = () => {
@@ -21,51 +14,65 @@ const Sidebar = () => {
   };
 
   return (
-    // pt 줘야함 헤더 크기에 맞춰서
     <div className="fixed flex h-full mt-[60px]">
       <div className="flex w-[64px] h-full px-[8px] py-[10px] flex-col justify-between items-center flex-shrink-0 border-r border-[rgba(194,196,200,0.52)] bg-[#F7F7F8] justify-between">
         <div className="flex flex-col gap-[8px] mt-[]">
           <Image
-            src={home}
+            src="/home.svg"
             alt="home"
+            width={48}
+            height={48}
             className="w-[48px] h-[48px] cursor-pointer"
             draggable={false}
           />
+
           <Image
-            src={calendar}
+            src="calendar.svg"
             alt="calendar"
+            width={48}
+            height={48}
             className="w-[48px] h-[48px] cursor-pointer"
             draggable={false}
           />
           <Image
-            src={notice}
+            src="/notice.svg"
             alt="notice"
+            width={48}
+            height={48}
             className="w-[48px] h-[48px] cursor-pointer"
             draggable={false}
           />
           <Image
-            src={personal_group}
+            src="/personal_group.svg"
             alt="personal_group"
+            width={48}
+            height={48}
             className="w-[48px] h-[48px] cursor-pointer"
             draggable={false}
           />
           <Image
-            src={meeting_hub}
+            src="/meeting_hub.svg"
             alt="meeting_hub"
+            width={48}
+            height={48}
             className="w-[48px] h-[48px] cursor-pointer"
             draggable={false}
           />
           <Image
-            src={webinar}
+            src="/webinar.svg"
             alt="webinar"
+            width={48}
+            height={48}
             className="w-[48px] h-[48px] cursor-pointer"
             draggable={false}
           />
         </div>
         <div className="">
           <Image
-            src={settings}
+            src="/settings.svg"
             alt="settings"
+            width={48}
+            height={48}
             className="w-[48px] h-[48px] cursor-pointer"
             draggable={false}
           />
