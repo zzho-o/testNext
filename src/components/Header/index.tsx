@@ -1,30 +1,26 @@
-"use client";
-
 import Image from "next/image";
 import Sidebar from "../Sidebar";
 import { useUserStore } from "@/stores/useExampleStore";
-import { usePathname } from "next/navigation";
-
-const leftHeaderPath = ["/signin"];
 
 const Header = () => {
-  const { name, position } = useUserStore();
-  const pathname = usePathname();
-  console.log(pathname);
-  const isLeftHedaer = leftHeaderPath.includes(pathname);
+  const { name, position, signout } = useUserStore();
+  const handleSignOut = () => {
+    signout();
+  };
 
   return (
     <>
       <div
-        className={`fixed flex ${isLeftHedaer ? "justify-start" : "justify-center"} lg:justify-between h-[60px] px-[20px] py-[12px] items-center flex-shrink-0 border-b border-[rgba(194,196,200,0.52)] bg-[#FFF] z-[100] w-full`}
+        className={`fixed flex ${name && position ? "justify-center" : "justify-start"} lg:justify-between h-[60px] px-[20px] py-[12px] items-center flex-shrink-0 border-b border-[rgba(194,196,200,0.52)] bg-[#FFF] z-[100] w-full`}
       >
         <Image
           src="/HanyangLogo.svg"
           alt="Hanyang"
           width={105}
           height={40}
-          className="w-[105px] h-[40px]"
+          className="w-[105px] h-[40px] cursor-pointer"
           draggable={false}
+          onClick={handleSignOut}
         />
         <div className="hidden lg:flex items-center h-full gap-[12px]">
           <Image
