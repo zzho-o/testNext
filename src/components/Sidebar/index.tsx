@@ -9,12 +9,12 @@ import settings from "@/assets/settings.svg";
 import { useState } from "react";
 
 const Sidebar = () => {
-  const [mainMenu, setMainMenu] = useState<number>(0);
+  // const [mainMenu, setMainMenu] = useState<number>(0);
   const [subMenu, setSubMenu] = useState<number>(0);
 
-  const handleMainMenu = (index: number) => {
-    setIsActive(index); // 예시
-  };
+  // const handleMainMenu = (index: number) => {
+  //   setIsActive(index); // 예시
+  // };
 
   const handleSubMenu = (idx: number) => {
     setSubMenu(idx);
