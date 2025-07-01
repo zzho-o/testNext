@@ -1,13 +1,23 @@
+"use client";
+
 import Image from "next/image";
 import Sidebar from "../Sidebar";
 import { useUserStore } from "@/stores/useExampleStore";
+import { usePathname } from "next/navigation";
+
+const leftHeaderPath = ["/signin"];
 
 const Header = () => {
   const { name, position } = useUserStore();
+  const pathname = usePathname();
+  console.log(pathname);
+  const isLeftHedaer = leftHeaderPath.includes(pathname);
 
   return (
     <>
-      <div className="fixed flex justify-between h-[60px] px-[20px] py-[12px] items-center flex-shrink-0 border-b border-[rgba(194,196,200,0.52)] bg-[#FFF] z-[100] w-full">
+      <div
+        className={`fixed flex ${isLeftHedaer ? "justify-start" : "justify-center"} lg:justify-between h-[60px] px-[20px] py-[12px] items-center flex-shrink-0 border-b border-[rgba(194,196,200,0.52)] bg-[#FFF] z-[100] w-full`}
+      >
         <Image
           src="/HanyangLogo.svg"
           alt="Hanyang"
