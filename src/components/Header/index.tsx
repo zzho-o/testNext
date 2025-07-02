@@ -7,6 +7,7 @@ import {
   DropdownMenuTrigger,
   DropdownMenuContent,
 } from "@/components/ui/dropdown-menu";
+import AdminMenu from "./AdminMenu";
 
 const mainMenu = [
   "home",
@@ -27,10 +28,16 @@ const menuLabels = [
 
 const Header = () => {
   const { name, position, signout } = useUserStore();
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [admin, setAdmin] = useState<boolean>(false);
 
   const handleSignOut = () => {
     signout();
+  };
+
+  const handleMainMenu = () => {
+    setAdmin(true);
+    setIsOpen(false);
   };
 
   return (
@@ -55,7 +62,11 @@ const Header = () => {
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-screen left-0 mt-[10px] h-screen border-none shadow-none rounded-none p-0">
             {mainMenu.map((item, idx) => (
-              <div key={idx} className="flex items-center cursor-pointer">
+              <div
+                key={idx}
+                onClick={handleMainMenu}
+                className="flex items-center cursor-pointer"
+              >
                 <Image
                   src={`/${item}.svg`}
                   alt={item}
@@ -95,14 +106,21 @@ const Header = () => {
           onClick={handleSignOut}
         />
         <div className={`${name && position ? "" : "hidden"} lg:hidden`}>
-          <Image
-            src="/bell.svg"
-            alt="bell"
-            width={28}
-            height={28}
-            className="w-[28px] h-[28px] cursor-pointer"
-            draggable={false}
-          />
+          {isOpen ? (
+            <></>
+          ) : (
+            <div className="flex items-center gap-[16px]">
+              <Image
+                src="/bell.svg"
+                alt="bell"
+                width={28}
+                height={28}
+                className="w-[28px] h-[28px] cursor-pointer"
+                draggable={false}
+              />
+              {admin ? <AdminMenu /> : <></>}
+            </div>
+          )}
         </div>
         <div className="hidden lg:flex items-center h-full gap-[12px]">
           <Image
