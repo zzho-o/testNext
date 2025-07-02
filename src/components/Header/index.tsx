@@ -61,12 +61,12 @@ const Header = () => {
               />
             </div>
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="w-screen left-0 mt-[10px] h-screen border-none shadow-none rounded-none p-0">
+          <DropdownMenuContent className="w-screen left-0 mt-[10px] h-screen border-none shadow-none rounded-none px-[20px] pt-[20px]">
             {mainMenu.map((item, idx) => (
               <div
                 key={idx}
                 onClick={handleMainMenu}
-                className="flex items-center cursor-pointer"
+                className="flex items-center cursor-pointer "
               >
                 <Image
                   src={`/${item}.svg`}
