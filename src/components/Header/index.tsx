@@ -8,6 +8,7 @@ import {
   DropdownMenuContent,
 } from "@/components/ui/dropdown-menu";
 import AdminMenu from "./AdminMenu";
+import CreateWebinar from "./CreateWebinar";
 
 const mainMenu = [
   "home",
@@ -49,6 +50,7 @@ const Header = () => {
 
   return (
     <div className="fixed h-full w-full">
+      <CreateWebinar />
       <div
         className={` flex ${name && position ? "justify-center" : "justify-start"}  relative lg:justify-between h-[60px] px-[20px] py-[12px] items-center flex-shrink-0 border-b border-[rgba(194,196,200,0.52)] bg-[#fff] z-[100] w-full `}
       >
