@@ -42,9 +42,9 @@ const Header = () => {
   };
 
   return (
-    <>
+    <div className="fixed h-full w-full">
       <div
-        className={`fixed flex ${name && position ? "justify-center" : "justify-start"}  relative lg:justify-between h-[60px] px-[20px] py-[12px] items-center flex-shrink-0 border-b border-[rgba(194,196,200,0.52)] bg-[#fff] z-[100] w-full`}
+        className={` flex ${name && position ? "justify-center" : "justify-start"}  relative lg:justify-between h-[60px] px-[20px] py-[12px] items-center flex-shrink-0 border-b border-[rgba(194,196,200,0.52)] bg-[#fff] z-[100] w-full `}
       >
         <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
           <DropdownMenuTrigger asChild>
@@ -164,11 +164,8 @@ const Header = () => {
           </div>
         </div>
       </div>
-
-      <div className="hidden lg:block">
-        <Sidebar />
-      </div>
-    </>
+      <Sidebar />
+    </div>
   );
 };
 

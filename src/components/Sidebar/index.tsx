@@ -23,7 +23,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="fixed flex max-h-[calc(100%-60px)] h-full mt-[60px]">
+    <div className="lg:flex max-h-[calc(100%-60px)] h-full hidden ">
       <div className="flex w-[64px] h-full px-[8px] py-[10px] flex-col justify-between items-center flex-shrink-0 border-r border-[rgba(194,196,200,0.52)] bg-[#F7F7F8] justify-between">
         <div className="flex flex-col gap-[8px] ">
           {mainMenu.map((item, idx) => (
