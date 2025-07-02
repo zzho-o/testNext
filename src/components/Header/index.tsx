@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Sidebar from "../Sidebar";
-import { useUserStore } from "@/stores/useExampleStore";
+import { useModalStore, useUserStore } from "@/stores/useStore";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -31,6 +31,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [admin, setAdmin] = useState<boolean>(false);
   const [adminOpen, setAdminOpen] = useState<boolean>(false);
+  const { openModal } = useModalStore();
 
   const handleSignOut = () => {
     signout();
@@ -39,6 +40,11 @@ const Header = () => {
   const handleMainMenu = () => {
     setAdmin(true);
     setIsOpen(false);
+  };
+
+  const handleModal = () => {
+    openModal();
+    console.log("open");
   };
 
   return (
@@ -135,6 +141,7 @@ const Header = () => {
         </div>
         <div className="hidden lg:flex items-center h-full gap-[12px]">
           <Image
+            onClick={handleModal}
             src="/bell.svg"
             alt="bell"
             width={28}
