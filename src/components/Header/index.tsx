@@ -30,6 +30,7 @@ const Header = () => {
   const { name, position, signout } = useUserStore();
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [admin, setAdmin] = useState<boolean>(false);
+  const [adminOpen, setAdminOpen] = useState<boolean>(false);
 
   const handleSignOut = () => {
     signout();
@@ -43,19 +44,19 @@ const Header = () => {
   return (
     <>
       <div
-        className={`fixed flex ${name && position ? "justify-between" : "justify-start"} lg:justify-between h-[60px] px-[20px] py-[12px] items-center flex-shrink-0 border-b border-[rgba(194,196,200,0.52)] bg-[#FFF] z-[100] w-full`}
+        className={`fixed flex ${name && position ? "justify-center" : "justify-start"}  relative lg:justify-between h-[60px] px-[20px] py-[12px] items-center flex-shrink-0 border-b border-[rgba(194,196,200,0.52)] bg-[#fff] z-[100] w-full`}
       >
         <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
           <DropdownMenuTrigger asChild>
             <div
-              className={`${name && position ? "" : "hidden"} lg:hidden w-[28px] h-[28px]`}
+              className={`${name && position ? "" : "hidden"} lg:hidden w-[28px] h-[28px] absolute left-[20px]`}
             >
               <Image
                 src="/mobile_menu.svg"
                 alt="mobile_menu"
                 width={28}
                 height={28}
-                className={`w-[28px] h-[28px] cursor-pointer ${isOpen ? "hidden" : ""}`}
+                className={`w-[28px] h-[28px] cursor-pointer ${isOpen || adminOpen ? "hidden" : ""}`}
                 draggable={false}
               />
             </div>
@@ -105,20 +106,30 @@ const Header = () => {
           draggable={false}
           onClick={handleSignOut}
         />
-        <div className={`${name && position ? "" : "hidden"} lg:hidden`}>
+        <div
+          className={`${name && position ? "" : "hidden"} lg:hidden  absolute right-[20px]`}
+        >
           {isOpen ? (
             <></>
           ) : (
             <div className="flex items-center gap-[16px]">
-              <Image
-                src="/bell.svg"
-                alt="bell"
-                width={28}
-                height={28}
-                className="w-[28px] h-[28px] cursor-pointer"
-                draggable={false}
-              />
-              {admin ? <AdminMenu /> : <></>}
+              {adminOpen ? (
+                <></>
+              ) : (
+                <Image
+                  src="/bell.svg"
+                  alt="bell"
+                  width={28}
+                  height={28}
+                  className="w-[28px] h-[28px] cursor-pointer"
+                  draggable={false}
+                />
+              )}
+              {admin ? (
+                <AdminMenu adminOpen={adminOpen} setAdminOpen={setAdminOpen} />
+              ) : (
+                <></>
+              )}
             </div>
           )}
         </div>

@@ -12,9 +12,12 @@ const adminMenu = [
   "팝업 관리",
   "레이아웃 관리",
 ];
+type AdminMenuProps = {
+  adminOpen: boolean;
+  setAdminOpen: (open: boolean) => void;
+};
 
-const AdminMenu = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+const AdminMenu = ({ adminOpen, setAdminOpen }: AdminMenuProps) => {
   const [isSelected, setIsSelected] = useState<number | null>(null);
 
   const handleSelect = (idx: number) => {
@@ -22,10 +25,10 @@ const AdminMenu = () => {
   };
   return (
     <>
-      <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
+      <DropdownMenu open={adminOpen} onOpenChange={setAdminOpen}>
         <DropdownMenuTrigger asChild>
           <div className={"lg:hidden w-[28px] h-[28px]"}>
-            {isOpen ? (
+            {adminOpen ? (
               <Image
                 src="/arrow_up.svg"
                 alt="arrow_up"
