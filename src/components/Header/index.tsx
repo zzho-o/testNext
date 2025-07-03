@@ -45,12 +45,13 @@ const Header = () => {
 
   const handleModal = () => {
     openModal();
-    console.log("open");
   };
 
   return (
     <div className="fixed h-full w-full">
-      <CreateWebinar />
+      <div className="mx-[12px]">
+        <CreateWebinar />
+      </div>
       <div
         className={` flex ${name && position ? "justify-center" : "justify-start"}  relative lg:justify-between h-[60px] px-[20px] py-[12px] items-center flex-shrink-0 border-b border-[rgba(194,196,200,0.52)] bg-[#fff] z-[100] w-full `}
       >
@@ -125,6 +126,7 @@ const Header = () => {
                 <></>
               ) : (
                 <Image
+                  onClick={handleModal}
                   src="/bell.svg"
                   alt="bell"
                   width={28}

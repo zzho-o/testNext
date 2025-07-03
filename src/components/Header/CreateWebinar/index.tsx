@@ -191,7 +191,7 @@ const CreateWebinar = () => {
               </div>
             </div>
             <div className="mt-[40px]" />
-            <button className="fixed h-[40px] bottom-[22px] flex flex-col w-[calc(100%-44px)] justify-center items-center self-stretch px-[20px] py-[9px] rounded-[8px] bg-[#0C2CA7]">
+            <button className="fixed h-[40px] bottom-[22px] flex flex-col w-[calc(100%-32px)] justify-center items-center self-stretch px-[20px] py-[9px] rounded-[8px] bg-[#0C2CA7]">
               <div className="text-white text-center font-pretendard text-[15px] font-semibold leading-[146.7%] tracking-[0.144px]">
                 <span>참여</span>
               </div>
