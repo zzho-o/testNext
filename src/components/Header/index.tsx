@@ -48,7 +48,7 @@ const Header = () => {
   };
 
   return (
-    <div className="fixed h-full w-full">
+    <div className="fixed top-0 left-0 h-full w-full">
       <div className="mx-[12px]">
         <CreateWebinar />
       </div>
