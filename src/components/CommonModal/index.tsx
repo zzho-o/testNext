@@ -26,7 +26,9 @@ export const CommonModal = ({
             {title}
           </DialogTitle>
         </DialogHeader>
-        <div className="h-full max-h-[calc(100%-40px)]">{children}</div>
+        <div className="relative h-full max-h-[calc(100%-40px)]">
+          {children}
+        </div>
       </DialogContent>
     </Dialog>
   );

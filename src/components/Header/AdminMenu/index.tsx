@@ -40,7 +40,7 @@ const AdminMenu = ({ adminOpen, setAdminOpen }: AdminMenuProps) => {
             ) : (
               <Image
                 src="/arrow_down.svg"
-                alt="arrow_up"
+                alt="arrow_down"
                 width={28}
                 height={28}
                 className="w-[28px] h-[28px] cursor-pointer"
