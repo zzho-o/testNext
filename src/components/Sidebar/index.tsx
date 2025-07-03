@@ -23,7 +23,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="lg:flex max-h-[calc(100%-60px)] h-full hidden ">
+    <div className="fixed lg:flex max-h-[calc(100%-60px)] h-full hidden  z-[50] bg-[#fff]">
       <div className="flex w-[64px] h-full px-[8px] py-[10px] flex-col justify-between items-center flex-shrink-0 border-r border-[rgba(194,196,200,0.52)] bg-[#F7F7F8] justify-between">
         <div className="flex flex-col gap-[8px] ">
           {mainMenu.map((item, idx) => (
@@ -51,7 +51,7 @@ const Sidebar = () => {
       {mainMenuIdx === null ? (
         <></>
       ) : (
-        <div className="flex my-[8px] ml-[8px] w-[180px] max-h-[calc(100%-16px)] p-4 flex-col items-start gap-3 flex-shrink-0 rounded-[20px] border border-[rgba(136,136,136,0.5)] shadow-[2px_2px_4px_rgba(0,0,0,0.08),0px_1px_2px_rgba(0,0,0,0.08)_inset,0px_-1px_2px_rgba(64,64,64,0.25)_inset] ">
+        <div className="flex my-[8px] ml-[8px] w-[180px] max-h-[calc(100%-16px)] p-4 flex-col items-start gap-3 flex-shrink-0 rounded-[20px] border border-[rgba(136,136,136,0.5)] shadow-[2px_2px_4px_rgba(0,0,0,0.08),0px_1px_2px_rgba(0,0,0,0.08)_inset,0px_-1px_2px_rgba(64,64,64,0.25)_inset]">
           <div
             onClick={() => handleSubMenu(0)}
             className={`text-[14px] leading-[1.429] tracking-[0.203px] font-pretendard ${subMenuIdx === 0 ? "text-[#0C2CA7] font-semibold" : "text-[#171719] font-normal"} cursor-pointer`}

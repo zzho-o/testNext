@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Image from "next/image";
-import Sidebar from "../Sidebar";
 import { useModalStore, useUserStore } from "@/stores/useStore";
 import {
   DropdownMenu,
@@ -48,7 +47,7 @@ const Header = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 h-full w-full">
+    <div className="fixed top-0 left-0 w-full">
       <div className="mx-[12px]">
         <CreateWebinar />
       </div>
@@ -175,7 +174,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <Sidebar />
     </div>
   );
 };
