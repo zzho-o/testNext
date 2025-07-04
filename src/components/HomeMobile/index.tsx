@@ -1,6 +1,7 @@
 import Image from "next/image";
 import CalendarMobile from "./CalendarMobile";
 import NoticeMobile from "./NoticeMobile";
+import ToDoListMobile from "./ToDoListMobile";
 
 const HomeMobile = ({ className = "" }: { className?: string }) => {
   return (
@@ -16,6 +17,8 @@ const HomeMobile = ({ className = "" }: { className?: string }) => {
       <div className="mt-[57px]" />
       <NoticeMobile />
       <CalendarMobile />
+      <div className="mt-[56px]" />
+      <ToDoListMobile />
     </div>
   );
 };

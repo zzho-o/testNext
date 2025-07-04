@@ -40,7 +40,7 @@ const CalendarMobile = () => {
         </div>
       </div>
       <div className="w-full flex justify-center">
-        <div className="flex w-[320px] gap-[8px] px-0 py-[7px] justify-center items-center gap-[10px] rounded-[8px] border border-[#E2E2E2] text-[#000] font-pretendard text-[14px] font-medium leading-[157.1%] tracking-[0.203px]">
+        <div className="flex w-full cursor-pointer gap-[8px] px-0 py-[7px] justify-center items-center gap-[10px] rounded-[8px] border border-[#E2E2E2] text-[#000] font-pretendard text-[14px] font-medium leading-[157.1%] tracking-[0.203px]">
           <span>Lead more</span>
           <Image
             src="/arrow_down.svg"
