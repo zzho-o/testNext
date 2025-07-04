@@ -151,6 +151,18 @@ const HomeLeftSide = ({ className = "" }: { className?: string }) => {
       <MeetingHub />
       <div className="mt-[40px]" />
       <Webinars />
+      <div className="mt-[28px] " />
+      <div className="flex items-center w-full flex justify-center gap-[8px] cursor-pointer text-black font-pretendard text-[14px] font-medium leading-[157.1%] tracking-[0.203px]">
+        <span>Load more</span>
+        <Image
+          src="/arrow_down.svg"
+          alt="arrow_down"
+          width={12}
+          height={6}
+          className="w-[12px] h-[6px]"
+          draggable={false}
+        />
+      </div>
     </div>
   );
 };
