@@ -103,7 +103,6 @@ const HomeLeftSide = ({ className = "" }: { className?: string }) => {
           draggable={false}
         />
         <div className="flex-50 w-[50%] aspect-[1.825] flex flex-col px-[24px] py-[28px] flex-shrink-0 rounded-[8px] border border-[#EEEFF0] bg-white shadow-[4px_6px_18px_rgba(0,0,0,0.06)]">
-          {/* 상단 영역: shrink 고정 */}
           <div className="flex justify-between items-center flex-shrink-0">
             <div className="flex items-center gap-[8px]">
               <Image
@@ -130,7 +129,6 @@ const HomeLeftSide = ({ className = "" }: { className?: string }) => {
               />
             </div>
           </div>
-          {/* notices 영역 */}
           <div className="mt-[24px] flex-1 overflow-y-auto min-h-0">
             {notices.map((item, idx) => (
               <NoticeContent
