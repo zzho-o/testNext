@@ -1,5 +1,8 @@
 import Image from "next/image";
 import NoticeContent from "./NoticeContent";
+import PersonalGroup from "./PersonalGroup";
+import MeetingHub from "./MeetingHub";
+import Webinars from "./Webinars";
 const notices = [
   {
     title: "2025학년도 1학기 및 여름계절학기 학기종료에 따른 수강생 문의 안내",
@@ -127,7 +130,6 @@ const HomeLeftSide = ({ className = "" }: { className?: string }) => {
               />
             </div>
           </div>
-
           {/* notices 영역 */}
           <div className="mt-[24px] flex-1 overflow-y-auto min-h-0">
             {notices.map((item, idx) => (
@@ -143,6 +145,12 @@ const HomeLeftSide = ({ className = "" }: { className?: string }) => {
           </div>
         </div>
       </div>
+      <div className="mt-[40px]" />
+      <PersonalGroup />
+      <div className="mt-[40px]" />
+      <MeetingHub />
+      <div className="mt-[40px]" />
+      <Webinars />
     </div>
   );
 };
