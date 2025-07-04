@@ -93,7 +93,7 @@ const notices = [
 const HomeLeftSide = ({ className = "" }: { className?: string }) => {
   return (
     <div className={className}>
-      <div className="flex gap-[12px]">
+      <div className="flex gap-[12px] ">
         <Image
           src="/home_banner.svg"
           alt="home_banner"
@@ -102,7 +102,8 @@ const HomeLeftSide = ({ className = "" }: { className?: string }) => {
           className="flex-50 w-[50%] cursor-pointer"
           draggable={false}
         />
-        <div className="flex-50 w-[50%] aspect-[1.825] flex flex-col px-[24px] py-[28px] flex-shrink-0 rounded-[8px] border border-[#EEEFF0] bg-white shadow-[4px_6px_18px_rgba(0,0,0,0.06)]">
+        <div className="flex-50 relative w-[50%] aspect-[1.825] flex flex-col px-[24px] py-[28px] flex-shrink-0 rounded-[8px] border border-[#EEEFF0] bg-white shadow-[4px_6px_18px_rgba(0,0,0,0.06)]">
+          <div className="pointer-events-none absolute bottom-[24px] left-[24px] w-[calc(100%-48px)] h-[80px] bg-gradient-to-t from-white to-transparent z-10" />
           <div className="flex justify-between items-center flex-shrink-0">
             <div className="flex items-center gap-[8px]">
               <Image
@@ -129,7 +130,7 @@ const HomeLeftSide = ({ className = "" }: { className?: string }) => {
               />
             </div>
           </div>
-          <div className="mt-[24px] flex-1 overflow-y-auto min-h-0">
+          <div className="relative mt-[24px] flex-1 overflow-y-auto min-h-0">
             {notices.map((item, idx) => (
               <NoticeContent
                 key={idx}
@@ -140,6 +141,7 @@ const HomeLeftSide = ({ className = "" }: { className?: string }) => {
                 view={item.view}
               />
             ))}
+            <div className="mt-[100px]" />
           </div>
         </div>
       </div>
