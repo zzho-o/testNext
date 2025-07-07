@@ -90,7 +90,7 @@ const notices = [
   },
 ];
 const NoticeMobile = () => {
-  const [emblaRef] = useEmblaCarousel({ loop: false });
+  const [emblaRef, embla] = useEmblaCarousel({ loop: false });
   return (
     <>
       <div className="flex w-full items-center justify-between">
@@ -108,7 +108,10 @@ const NoticeMobile = () => {
           </div>
         </div>
         <div className="flex gap-[8px]">
-          <div className="flex cursor-pointer w-[32px] h-[32px] justify-center items-center border border-[#DBDCDF]">
+          <div
+            onClick={() => embla && embla.scrollPrev()}
+            className="flex cursor-pointer w-[32px] h-[32px] justify-center items-center border border-[#DBDCDF]"
+          >
             <Image
               src="/arrow_left.svg"
               alt="arrow_left"
@@ -118,7 +121,10 @@ const NoticeMobile = () => {
               draggable={false}
             />
           </div>
-          <div className="flex cursor-pointer w-[32px] h-[32px] justify-center items-center border border-[#DBDCDF]">
+          <div
+            onClick={() => embla && embla.scrollNext()}
+            className="flex cursor-pointer w-[32px] h-[32px] justify-center items-center border border-[#DBDCDF]"
+          >
             <Image
               src="/arrow_right.svg"
               alt="arrow_right"

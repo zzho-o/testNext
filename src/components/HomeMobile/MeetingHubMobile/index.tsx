@@ -66,9 +66,9 @@ const MeetingHubMobile = () => {
         {meeting_hub.map((item, idx) => (
           <div
             key={idx}
-            className="flex flex-col items-start gap-[10px] h-[94px] p-[16px] flex-shrink-0 self-stretch rounded-[8px] border border-[#EEEEF0] bg-[#FFF] shadow-[4px_6px_18px_0px_rgba(0,0,0,0.06)]"
+            className="flex flex-col items-start gap-[10px] overflow-hidden h-[94px] p-[16px] flex-shrink-0 self-stretch rounded-[8px] border border-[#EEEEF0] bg-[#FFF] shadow-[4px_6px_18px_0px_rgba(0,0,0,0.06)]"
           >
-            <div className="text-[#292A2D] font-pretendard text-[18px] font-semibold leading-[144.5%] tracking-[-0.004px] not-italic">
+            <div className="text-[#292A2D]  whitespace-nowrap font-pretendard text-[18px] font-semibold leading-[144.5%] tracking-[-0.004px] not-italic">
               <span>{item.title}</span>
               <div className="mt-[8px] flex items-center">
                 {item.type === "Offline" ? (

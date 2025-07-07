@@ -28,6 +28,7 @@ const HomeMobile = ({ className = "" }: { className?: string }) => {
       <MeetingHubMobile />
       <div className="mt-[56px]" />
       <WebinarMobile />
+      <div className="mt-[34px]" />
     </div>
   );
 };
