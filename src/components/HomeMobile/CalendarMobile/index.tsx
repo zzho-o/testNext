@@ -15,27 +15,38 @@ const CalendarMobile = () => {
           <span>2025</span>
         </div>
         <div className="flex">
-          <div className="flex gap-[8px]">
-            <div className="flex cursor-pointer w-[32px] h-[32px] justify-center items-center border border-[#DBDCDF]">
-              <Image
-                src="/arrow_left.svg"
-                alt="arrow_left"
-                width={10}
-                height={20}
-                className="w-[10px] h-[20px]"
-                draggable={false}
-              />
+          <div className="flex items-center">
+            <div className="flex gap-[8px]">
+              <div className="flex cursor-pointer w-[32px] h-[32px] justify-center items-center border border-[#DBDCDF]">
+                <Image
+                  src="/arrow_left.svg"
+                  alt="arrow_left"
+                  width={10}
+                  height={20}
+                  className="w-[10px] h-[20px]"
+                  draggable={false}
+                />
+              </div>
+              <div className="flex cursor-pointer w-[32px] h-[32px] justify-center items-center border border-[#DBDCDF]">
+                <Image
+                  src="/arrow_right.svg"
+                  alt="arrow_right"
+                  width={10}
+                  height={20}
+                  className="w-[10px] h-[20px]"
+                  draggable={false}
+                />
+              </div>
             </div>
-            <div className="flex cursor-pointer w-[32px] h-[32px] justify-center items-center border border-[#DBDCDF]">
-              <Image
-                src="/arrow_right.svg"
-                alt="arrow_right"
-                width={10}
-                height={20}
-                className="w-[10px] h-[20px]"
-                draggable={false}
-              />
-            </div>
+            <div className="ml-[27px]" />
+            <Image
+              src="/more_plus.svg"
+              alt="more_plus"
+              width={14}
+              height={14}
+              className="w-[14px] h-[14px] cursor-pointer"
+              draggable={false}
+            />
           </div>
         </div>
       </div>

@@ -100,8 +100,18 @@ const MeetingHub = () => {
             <div className="flex-480 text-[#5A5C63] px-[20px] py-[11px] font-pretendard text-[16px] font-medium leading-[162.5%] tracking-[0.091px]">
               <span>{item.title}</span>
             </div>
-            <div className="flex-205 text-[#5A5C63] px-[20px] py-[11px] font-pretendard text-[16px] font-medium leading-[162.5%] tracking-[0.091px]">
-              <span>{item.type}</span>
+            <div className="flex-205 text-[#5A5C63] px-[20px] py-[11px]  leading-[162.5%] tracking-[0.091px]">
+              {item.type === "Offline" ? (
+                <div className="flex justify-center w-[70px] items-center gap-[6px] h-[26px] px-[7px] py-[4px] rounded-[8px] bg-[#DBDCDF] text-[#5A5C63] font-pretendard text-[13px] font-medium leading-[138.5%] tracking-[0.252px] not-italic">
+                  <div className="w-[6px] h-[6px] rounded-full bg-[#5A5C63]"></div>
+                  <span>Offline</span>
+                </div>
+              ) : (
+                <div className="flex justify-center items-center w-[70px] gap-[6px] px-[7px] py-[4px] rounded-[8px] bg-[rgba(50,205,50,0.10)] text-[#32CD32] font-pretendard text-[13px] font-medium leading-[138.5%] tracking-[0.252px] not-italic">
+                  <div className="w-[6px] h-[6px] rounded-full bg-[#32CD32]"></div>
+                  <span>Offline</span>
+                </div>
+              )}
             </div>
             <div className="flex-205 text-[#5A5C63] px-[20px] py-[11px] font-pretendard text-[16px] font-medium leading-[162.5%] tracking-[0.091px]">
               <span>{item.time}</span>

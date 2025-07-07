@@ -2,6 +2,9 @@ import Image from "next/image";
 import CalendarMobile from "./CalendarMobile";
 import NoticeMobile from "./NoticeMobile";
 import ToDoListMobile from "./ToDoListMobile";
+import PersonalGroupMobile from "./PersonalGroupMobile";
+import MeetingHubMobile from "./MeetingHubMobile";
+import WebinarMobile from "./WebinarMobile";
 
 const HomeMobile = ({ className = "" }: { className?: string }) => {
   return (
@@ -19,6 +22,12 @@ const HomeMobile = ({ className = "" }: { className?: string }) => {
       <CalendarMobile />
       <div className="mt-[56px]" />
       <ToDoListMobile />
+      <div className="mt-[56px]" />
+      <PersonalGroupMobile />
+      <div className="mt-[56px]" />
+      <MeetingHubMobile />
+      <div className="mt-[56px]" />
+      <WebinarMobile />
     </div>
   );
 };
