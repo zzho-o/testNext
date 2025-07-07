@@ -9,7 +9,7 @@ type Props = {
 
 const ClientLayout = ({ children }: Props) => {
   return (
-    <div className="bg-[background: #FDFDFD;]">
+    <div className="bg-[#FDFDFD]">
       <Header />
       <Sidebar />
       {children}

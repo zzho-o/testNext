@@ -48,9 +48,7 @@ const Header = () => {
 
   return (
     <div className="fixed top-0 left-0 w-full">
-      <div className="mx-[12px]">
-        <CreateWebinar />
-      </div>
+      <div className="mx-[12px]">{/* <CreateWebinar /> */}</div>
       <div
         className={` flex ${name && position ? "justify-center" : "justify-start"}  relative lg:justify-between h-[60px] px-[20px] py-[12px] items-center flex-shrink-0 border-b border-[rgba(194,196,200,0.52)] bg-[#fff] z-[100] w-full `}
       >
